@@ -20,7 +20,7 @@ int main() {
             }
         }
     }
-cout<<"===================="<<endl;
+    cout<<"===================="<<endl;
 cout<<"Numeri ordinati in ordine crescente:"<<endl;
     for(int i=0;i<10;i++){
         cout<<numeri[i]<<endl;
