@@ -4,7 +4,7 @@ using namespace std;
 void soggiorno(int settimane,int lenzuola){
     const int quota_fissa=100;
     const int costo_settimana=600;
-    const int costo_due_setimane=1100;
+    const int costo_due_settimane=1100;
     int supplemento_lenzuola=20*settimane;
     int costo_totale=0;
     cout<<"Quante settimane vuoi soggiornare? ";
@@ -16,7 +16,7 @@ void soggiorno(int settimane,int lenzuola){
     }
     else{
         if(settimane==2){
-            costo_totale=quota_fissa+costo_due_setimane;
+            costo_totale=quota_fissa+costo_due_settimane;
         }
         else{
             costo_totale=quota_fissa+costo_settimana;
