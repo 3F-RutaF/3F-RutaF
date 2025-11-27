@@ -12,7 +12,8 @@ int main(){
     cin>>peso;
     if(peso>20){
         peso_eccesso=peso-20;
-        totale=costo+(peso_eccesso*tariffa);
+       float extra=peso_eccesso*tariffa*costo;
+         totale=costo+extra;
         cout<<"\nCosto totale con sovrapprezzo: "<<totale;}
     else{ 
         cout<<"\nCosto totale: "<<costo;
