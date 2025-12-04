@@ -1,4 +1,4 @@
-#include ><stdio.h>
+#include <stdio.h>
 
 // Programma che verifica se il numero inserito è compreso tra -5 e 10 
 

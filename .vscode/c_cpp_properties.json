@@ -10,16 +10,10 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/mingw64/bin/g++.exe",
+            "compilerPath": "C:/cygwin64/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64",
-            "browse": {
-                "path": [
-                    "${workspaceFolder}"
-                ],
-                "limitSymbolsToIncludedHeaders": true
-            }
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4
