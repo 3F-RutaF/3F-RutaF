@@ -21,7 +21,10 @@ int main(){
     else if(età>=18){
         cout<<"Puoi guidare l'auto fino a 95 cavalli."<<endl;
     }
-    else{
+    else if(età>=21){
         cout<<"Puoi guidare qualsiasi veicolo."<<endl;
+    }
+    else{
+        cout<<"Non puoi guidare alcun veicolo."<<endl;
     }
 }
