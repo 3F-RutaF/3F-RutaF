@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     float n1, n2, x;
 
-    cout << "Inserisci i coefficienti dell'equazione (n1=x,n2=b): " << endl;
+    cout << "Inserisci i coefficienti dell'equazione (n1=a,n2=b): " << endl;
     cin >> n1,n2;
 
     if (n1 != 0) {
