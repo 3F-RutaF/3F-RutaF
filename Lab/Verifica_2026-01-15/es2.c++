@@ -5,7 +5,7 @@ const int biglietto_urbano = 2;
 const int biglietto_extraurbano = 3;
 const int biglietto_giornaliero = 5;
 
-int manin(){
+int main(){
 
     int scelta;
     float importo=0.0;
