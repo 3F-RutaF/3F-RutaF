@@ -17,7 +17,8 @@ int main() {
     cin >> numero;
 
     cout << "Il fattoriale di " << numero << " è: " 
-         << fattoriale(numero) << endl;
-
-    return 0;
+       << fattoriale(numero) << endl;
 }
+    return 0;
+
+
