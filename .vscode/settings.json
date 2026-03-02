@@ -3,6 +3,5 @@
         "iostream": "cpp",
         "ostream": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled",
-    "CodeGPT.apiKey": "Github Copilot"
+    "C_Cpp.errorSquiggles": "disabled"
 }
