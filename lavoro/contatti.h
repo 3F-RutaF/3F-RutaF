@@ -1,21 +1,38 @@
 #ifndef CONTATTI_H
 #define CONTATTI_H
 
-const int MAX = 100;
+#include <iostream>
+#include <cstring>
 
-struct Contatto {
+using namespace std;
+
+class Contatto {
+
+private:
     char nome[50];
     char telefono[20];
+
+public:
+
+    void setNome(const char n[]) {
+        strcpy(nome, n);
+    }
+
+    void setTelefono(const char t[]) {
+        strcpy(telefono, t);
+    }
+
+    char* getNome() {
+        return nome;
+    }
+
+    char* getTelefono() {
+        return telefono;
+    }
+
+    void stampa() {
+        cout << nome << " - " << telefono << endl;
+    }
 };
-
-extern Contatto agenda[MAX]; // extern: variabile definita in un altro file (funzioni.cpp)
-extern int n;
-
-void inizializza();
-void stampa();
-int cercaBinaria(char nome[]);
-void cerca();
-void aggiungi();
-void elimina();
 
 #endif
