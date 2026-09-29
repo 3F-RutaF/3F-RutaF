@@ -1,3 +1,4 @@
+```java
 import java.util.Scanner;
 
 class Student {
@@ -7,7 +8,7 @@ class Student {
     double grade2;
     double grade3;
 
-    // Constructor
+    // Costruttore: inizializza i dati dello studente
     Student(String name, int age, double grade1, double grade2, double grade3) {
         this.name = name;
         this.age = age;
@@ -16,17 +17,16 @@ class Student {
         this.grade3 = grade3;
     }
 
-    // Calculate average
+    // Restituisce la media dei voti
     double getAverage() {
         return (grade1 + grade2 + grade3) / 3;
     }
 
-    // Check if student passed
+    // Restituisce true se la media è almeno 6
     boolean hasPassed() {
         return getAverage() >= 6;
     }
 
-    // Display student information
     void showInfo() {
         System.out.println("\n--- Student ---");
         System.out.println("Name: " + name);
@@ -64,7 +64,7 @@ public class Main {
         System.out.print("Enter third grade: ");
         double grade3 = scanner.nextDouble();
 
-        // Create object
+        // Crea un oggetto della classe Student
         Student student = new Student(
             name,
             age,
@@ -73,9 +73,10 @@ public class Main {
             grade3
         );
 
-        // Show information
+        // Chiama il metodo per mostrare i dati
         student.showInfo();
 
         scanner.close();
     }
 }
+```
