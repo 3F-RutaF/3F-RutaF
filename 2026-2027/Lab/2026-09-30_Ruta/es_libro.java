@@ -36,6 +36,11 @@ class Punto{
         }
     }
 
+    output(){
+        System.out.println("Punto: (" + x + ", " + y + ")");
+    }
+    
+
 
     
 }
