@@ -44,38 +44,36 @@ public class Esempio {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("=== STUDENT MANAGEMENT ===");
-
-        System.out.print("Enter student name: ");
-        String name = scanner.nextLine();
-
-        System.out.print("Enter age: ");
-        int age = scanner.nextInt();
-
-        System.out.print("Enter first grade: ");
-        double grade1 = scanner.nextDouble();
-
-        System.out.print("Enter second grade: ");
-        double grade2 = scanner.nextDouble();
-
-        System.out.print("Enter third grade: ");
-        double grade3 = scanner.nextDouble();
-
-        // Crea un oggetto della classe Student
-        Student student = new Student(
-            name,
-            age,
-            grade1,
-            grade2,
-            grade3
-        );
-
-        // Chiama il metodo per mostrare i dati
-        student.showInfo();
-
-        scanner.close();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("=== STUDENT MANAGEMENT ===");
+            
+            System.out.print("Enter student name: ");
+            String name = scanner.nextLine();
+            
+            System.out.print("Enter age: ");
+            int age = scanner.nextInt();
+            
+            System.out.print("Enter first grade: ");
+            double grade1 = scanner.nextDouble();
+            
+            System.out.print("Enter second grade: ");
+            double grade2 = scanner.nextDouble();
+            
+            System.out.print("Enter third grade: ");
+            double grade3 = scanner.nextDouble();
+            
+            // Crea un oggetto della classe Student
+            Student student = new Student(
+                    name,
+                    age,
+                    grade1,
+                    grade2,
+                    grade3
+            );
+            
+            // Chiama il metodo per mostrare i dati
+            student.showInfo();
+        }
     }
 }
 
