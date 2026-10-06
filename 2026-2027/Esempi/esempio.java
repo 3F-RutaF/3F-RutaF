@@ -1,4 +1,3 @@
-```java
 import java.util.Scanner;
 
 class Student {
@@ -41,7 +40,7 @@ class Student {
     }
 }
 
-public class Main {
+public class Esempio {
 
     public static void main(String[] args) {
 
@@ -79,4 +78,4 @@ public class Main {
         scanner.close();
     }
 }
-```
+
