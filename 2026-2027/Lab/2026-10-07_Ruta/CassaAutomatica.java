@@ -39,16 +39,17 @@ public class CassaAutomatica {
     }
 
     public static void main(String[] args) {
-
+        
         CassaAutomatica cassa = new CassaAutomatica(10);
 
         cassa.aggiungiPrezzo(2.50);
         cassa.aggiungiPrezzo(1.80);
         cassa.aggiungiPrezzo(5.20);
         cassa.aggiungiPrezzo(3.00);
-
+        cassa.aggiungiPrezzo(4.75);
+        
         double totale = cassa.calcolaTotale();
-
+        
         System.out.println("Totale: " + totale + " euro");
 
         double pagamento = 20.00;
