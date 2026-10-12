@@ -24,7 +24,7 @@ public static class Studente extends Persona {
     }
       @Override    
       public void lavoro(){
-        System.out.println("sto lavorando");
+        System.out.println("sto studiando");
      }   
      
 }
