@@ -34,9 +34,9 @@ static class Studente extends Persona {
     }
 }
     public static void main(String[] args) {
-        Persona p1 = new Persona("Mario", "Rossi", 45);
+        Persona p1 = new Persona("Andrea", "Rossi", 45);
         Studente s1 = new Studente("Luca", "Ponnamperumage", 18, "4F", 7.5);
-        Studente s2 = new Studente("Andrea", "Bartox", 17, "4BA", 5.3);
+        Studente s2 = new Studente("Alfonso", "Bartox", 17, "4BA", 5.3);
 
         Persona[] listaPersona = {p1, s1, s2};
         for (int i = 0; i < listaPersona.length; i++) {
