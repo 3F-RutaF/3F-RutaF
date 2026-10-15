@@ -36,5 +36,5 @@ Squadra s3 = new Squadra("Leoni", 12);
 
 System.out.println("s1 è uguale a s3? " + s1.equals(s3));
 // cosa stampa? perché?
-}
-}
+  }
+ }
