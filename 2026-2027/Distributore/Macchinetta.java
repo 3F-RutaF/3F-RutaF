@@ -1,38 +1,55 @@
+
 public class Macchinetta {
+    private GestoreContanti gestoreContanti;
+    private GestoreChiavetta gestoreChiavetta;
+    private Slot[] slots;
 
-    private float prezzo;
-    private float resto;
-    private String prodotto;
-    private int prodotto_rimanente;
-
-    public Macchinetta(float prezzo, float resto, String prodotto,int prodotto_rimanente) {
-        this.prezzo = prezzo;
-        this.resto = resto;
-        this.prodotto = prodotto;
-        this.prodotto_rimanente = prodotto_rimanente;
+    public Macchinetta(Slot[] slots) {
+        this.slots = slots;
+        this.gestoreContanti = new GestoreContanti();
+        this.gestoreChiavetta = new GestoreChiavetta();
     }
 
-    public void inserisciDenaro(float importo) {
+    public void stampaProdotti() {
+        for (int i = 0; i < slots.length; i++) {
+            Prodotto p = slots[i].getProdotto();
 
+            System.out.println(
+                i + " - " + p.getNome()
+                + " | Prezzo: " + p.getPrezzo()
+                + " euro | Quantita: "
+                + slots[i].getQuantita()
+            );
+        }
     }
 
-    public void erogaProdotto() {
+    public void acquista(int indice, float denaro) {
+        if (indice < 0 || indice >= slots.length) {
+            System.out.println("Slot non valido!");
+            return;
+        }
 
-    }
+        Slot slot = slots[indice];
+        Prodotto prodotto = slot.getProdotto();
 
-    public float restituisciResto() {
-        return 0.0f;
-    }
+        if (slot.getQuantita() <= 0) {
+            System.out.println("Prodotto esaurito!");
+            return;
+        }
 
-    public int getProdottoRimanente() {
-        return 0;
-    }
+        float prezzo = prodotto.getPrezzo();
 
-    public float getPrezzo() {
-        return 0.0f;
-    }
+        if (!gestoreContanti.pagamentoValido(denaro, prezzo)) {
+            System.out.println("Denaro insufficiente!");
+            return;
+        }
 
-    public String getProdotto() {
-        return "";
+        float resto = gestoreContanti.calcolaResto(denaro, prezzo);
+
+        slot.scalaQuantita();
+
+        System.out.println("Acquisto effettuato!");
+        System.out.println("Erogazione: " + prodotto.getNome());
+        System.out.println("Resto: " + resto + " euro");
     }
 }
