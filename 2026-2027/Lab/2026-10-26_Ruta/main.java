@@ -46,7 +46,37 @@ class Podcast extends TracciaAudio {
         return super.show() + " | Conduttore: " + conduttore + " | Ospite: " + ospite;
     }
 
+
+
 }
+    
+ class Lettore extends TracciaAudio {
+
+    public Lettore(String nome, double durata) {
+        super(nome, durata);
+    }
+
+        int volume=5;
+        int aumentaVolume(){
+            if(volume<10){
+                volume++;
+            }
+            return volume;
+        }
+
+        int diminuisciVolume(){
+            if(volume>0){
+                volume--;
+            }
+            return volume;
+        }
+
+        void Riproduci(TracciaAudio traccia){
+            System.out.println("Riproduzione: " + traccia.show() + " | Volume: " + volume);
+        }
+
+    }
+
 public class main{
 
     public static void main(String[] args) {
@@ -54,7 +84,10 @@ public class main{
         TracciaAudio playlist[] = {
             new Canzone("Canzone1", "Autore1", "Feat1", 3.5),
             new Canzone("Canzone2", "Autore2", "Feat2", 4.0),
+            new Podcast("Podcast1", "Conduttore1", "Ospite1", 30.0),
+            new Lettore("Lettore1", 5.0)
         };
+
 
         for (TracciaAudio brano : playlist) {
             System.out.println(brano.show());
